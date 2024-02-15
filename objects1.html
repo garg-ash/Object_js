@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects1</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname: "Ashish",
+            lname: "Garg",
+            Phone : 7734958639,
+            pin : 303905,
+            isLoggedIn : "True",
+        }
+
+        console.log(person)
+        console.log(person.lname)
+        console.log(typeof person)
+
+        //---------------------------------
+        //Array in objects
+
+
+        const person1 = {
+            fname : "Ashish",
+            lname : "Garg",
+            Phone : 7734959639,
+            Location : "Jaipur",
+            subjects : ["English", "Hindi", "Maths"]
+        }
+
+        console.log(person1)
+        console.log(person1.Phone)
+        console.log(person1.subjects[2]);
+
+
+        //function in objects
+
+        const person2 = {
+            fname: "Ashish",
+            lname: "Garg",
+            city: "Jaipur",
+            Course : "FS",
+            details: {
+                sub1 :"English",
+                sub2 :"Hindi",
+                sub3 :"Maths", 
+            },
+            marks:(hindi, english, maths)=>
+            {
+                return hindi+english+maths
+            }
+
+        }
+        console.log(person2.marks(70,80,90))
+        console.log(person2)
+        console.log(person2.details.sub3)
+
+
+        //insert a new value of any key in an object
+
+        const person3 = new Object()
+        {
+            person3.fname = "Ashish",
+            person3.lname = "Garg",
+            person3.city = "jaipur"
+        }
+        console.log(person3)
+        person3.fname = "Avi"
+        console.log(person3.fname)
+
+
+        //question:write a program to print object, array in object, object in object and funtions in object.
+
+
+        const user = {
+            fname : "Ashish",
+            lname: "Garg",
+            course:"Btech",
+            gender: "male"
+        }
+
+        console.log(user)
+
+
+        //object in object
+        const user1 = {
+            fname : "Ashish",
+            lname: "Garg",
+            course:"Btech",
+            gender: "male",
+            details: {
+                company: "FSL",
+                salary: 25000,
+            }
+        }
+        console.log(user1.details)
+        console.log(user1.details.salary)
+
+        //array in objects
+        const user2 = {
+            fname : "Ashish",
+            lname: "Garg",
+            course:"Btech",
+            gender: "male",
+            details : ["company", "salary"]
+        }
+        console.log(user2.details[1])
+
+
+        const user3 = {
+            fname : "Ashish",
+            lname: "Garg",
+            course:"Btech",
+            gender: "male",
+            details :{
+                sub1 : "english",
+                sub2 : "hindi",
+                sub3 : "maths",
+            },
+            marks: (english, hindi, maths)=>{
+                return(english+hindi+maths)
+            }
+        }
+        console.log(user3.marks(70,80,90))
+
+
+
+
+        const user4 = {
+            fname: "Aman",
+            lname: "Sharma",
+            gender: "male",
+            age: 30,
+            fruits: ["banana", "apple", "orange"],
+            details : {
+                city: "Jaipur",
+                state : "Rajasthan",
+                country: "India"
+            },
+            marks:(e,h,m)=>{
+                return e+h+m
+            }
+        }
+        console.log(user4.marks(50,60,70))
+        console.log(user4)
+        console.log(user4.details.city)
+        console.log(user4.fruits[2])
+
+
+        //Object.keys
+        const obj1 = {
+            fname : "Ashish",
+            lname : "Garg",
+            email: "ashish@gmail.com",
+
+        } 
+        console.log(obj1)
+        console.log(Object.keys(obj1))
+        console.log(Object.keys(obj1)[1]);
+        
+        
+        //Object.values
+        const obj2 = {
+            fname : "Ashish",
+            lname : "Garg",
+            email: "ashish@gmail.com",
+        }
+        console.log(Object.values(obj2))
+        console.log(Object.values(obj2)[1]);
+
+
+        //Object freeze
+
+        const obj3 = {
+            fname: "Ashish",
+            lname: "Garg",
+            Email: "ashish@gmail.com",
+            phone: 1234567890,
+        }
+        console.log(obj3.fname)
+        Object.freeze(obj1)
+        fname : "Akash"
+        console.log(obj3.fname)
+
+
+        //--------------for-in loop-------------------
+
+        const obj4 = {
+            fname:"Ashish",
+            lname:"Garg",
+            Email : "ashish@gmail.com",
+        }
+        for (let key in obj4){
+            console.log(obj4[key])
+        }
+
+
+        //------------for-of loop-----------
+        const obj5 = {
+            fname:"Ashish",
+            lname:"Garg",
+            Email : "ashish@gmail.com",
+        }
+        for (const key of obj5){
+            console.log(obj5[key])
+        }
+    </script>
+</body>
+</html>
